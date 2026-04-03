@@ -283,7 +283,7 @@ function initConfetti() {
     if (!videoErr) return;
     videoErr.hidden = false;
     videoErr.textContent =
-      "Видео не удалось открыть. Проверьте, что IMG_0283.mp4 лежит рядом с index.html, закоммичен и запушен на GitHub (лимит одного файла ~100 МБ). В Chrome нужен MP4 с кодеком H.264.";
+      "Видео не удалось открыть. Проверьте, что compressed_img_0283.mp4 лежит рядом с index.html, закоммичен и запушен на GitHub (лимит одного файла ~100 МБ). В Chrome нужен MP4 с кодеком H.264.";
   };
 
   const closeVideo = () => {
