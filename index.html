@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>С Днём рождения, папа</title>
+    <meta
+      name="description"
+      content="Одностраничный сайт-поздравление папе: мотоциклы, машины, золотые руки и главное — он наша опора."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Перейти к содержимому</a>
+
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--1"></div>
+      <div class="bg__glow bg__glow--2"></div>
+      <div class="bg__noise"></div>
+    </div>
+
+    <header class="topbar" role="banner">
+      <div class="wrap topbar__inner">
+        <div class="brand" aria-label="Поздравление">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">Папе</span>
+        </div>
+
+        <nav class="nav" aria-label="Навигация по странице">
+          <a class="nav__link" href="#about">Главное</a>
+          <a class="nav__link" href="#certificate">Сертификат</a>
+          <a class="nav__link" href="#passions">Увлечения</a>
+          <a class="nav__link" href="#hands">Золотые руки</a>
+          <a class="nav__link" href="#thanks">Спасибо</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" type="button" data-action="toggle-theme">
+            <span class="btn__icon" aria-hidden="true">◐</span>
+            <span class="btn__text" data-theme-label>Тема</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <section class="hero" aria-label="Главный экран">
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+            <p class="kicker">С днём рождения, папа</p>
+            <h1 class="hero__title">
+              Ты — наша <span class="accent">опора</span>.
+              <br />
+              Всё, что мы смогли, — это
+              <span class="accent">твоя заслуга</span>.
+            </h1>
+            <p class="hero__lead">
+              Ты умеешь делать невозможное возможным: в гараже, на дороге и в жизни. И рядом с
+              тобой всегда есть чувство: “с нами всё будет хорошо”.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#thanks">
+                <span class="btn__text">Открыть поздравление</span>
+                <span class="btn__icon" aria-hidden="true">→</span>
+              </a>
+              <button class="btn btn--soft" type="button" data-action="play">
+                <span class="btn__icon" aria-hidden="true">▶</span>
+                <span class="btn__text" data-play-label>Включить атмосферу</span>
+              </button>
+            </div>
+
+            <ul class="chips" aria-label="Факты">
+              <li class="chip">Мотоциклы</li>
+              <li class="chip">Машины</li>
+              <li class="chip">Золотые руки</li>
+              <li class="chip">Сила и доброта</li>
+            </ul>
+          </div>
+
+          <div class="hero__card" aria-label="Карточка-поздравление">
+            <div class="card card--glass">
+              <div class="card__top">
+                <div class="badge">
+                  <span class="badge__dot" aria-hidden="true"></span>
+                  <span class="badge__text">С любовью и уважением</span>
+                </div>
+                <div class="meter" aria-hidden="true">
+                  <div class="meter__label">Опора</div>
+                  <div class="meter__bar">
+                    <div class="meter__fill" style="--fill: 100%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__mid">
+                <div class="emblem" aria-hidden="true">
+                  <div class="emblem__ring"></div>
+                  <div class="emblem__core"></div>
+                  <div class="emblem__slash"></div>
+                </div>
+                <p class="card__quote">
+                  “Спасибо, что научил не сдаваться, держать слово и идти вперёд. Ты рядом —
+                  значит, нам по силам всё.”
+                </p>
+              </div>
+
+              <div class="card__bottom">
+                <div class="sig">
+                  <span class="sig__label">От</span>
+                  <span class="sig__name" contenteditable="true" spellcheck="false" data-edit="name"
+                    >Валеры, Леры и Кристины</span
+                  >
+                </div>
+                <div class="sig">
+                  <span class="sig__label">Дата</span>
+                  <span class="sig__name" data-date></span>
+                </div>
+              </div>
+            </div>
+            <p class="hint">
+              Можно кликнуть на подпись и при желании изменить её — она сохранится в браузере.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-label="Главное">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 class="section__title">Самое главное</h2>
+            <p class="section__subtitle">
+              Не про вещи. Про человека, на которого можно опереться.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="tile">
+              <h3 class="tile__title">Опора</h3>
+              <p class="tile__text">
+                Ты всегда рядом — советом, делом, спокойствием. С тобой не страшно начинать заново
+                и не стыдно просить помощи.
+              </p>
+            </article>
+            <article class="tile">
+              <h3 class="tile__title">Пример</h3>
+              <p class="tile__text">
+                Ты показал, что сила — это ответственность, а уважение — это поступки. Именно так мы
+                учимся жить и строить свой путь.
+              </p>
+            </article>
+            <article class="tile">
+              <h3 class="tile__title">Наша заслуга — твоя</h3>
+              <p class="tile__text">
+                Всё, что у нас получилось, выросло из твоей поддержки: твоего терпения, труда и
+                веры в нас.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificate" class="section" aria-label="Сертификат">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 class="section__title">Сертификат</h2>
+            <p class="section__subtitle">Варянице Михаил Олегович — самый лучший отец. Официально.</p>
+          </div>
+
+          <div class="cert card card--glass">
+            <div class="cert__media">
+              <img
+                class="cert__img"
+                src="./certificate-mikhail.svg"
+                alt="Сертификат: Самому лучшему отцу — Варянице Михаилу Олеговичу"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert__side">
+              <h3 class="cert__title">Самому лучшему отцу</h3>
+              <p class="cert__text">
+                За надёжность, силу, заботу и золотые руки. Этот сертификат — маленькое “спасибо” за
+                большую любовь.
+              </p>
+              <div class="cert__actions">
+                <a class="btn btn--primary" href="./certificate-mikhail.svg" download>
+                  <span class="btn__text">Скачать сертификат</span>
+                  <span class="btn__icon" aria-hidden="true">⤓</span>
+                </a>
+                <a class="btn btn--soft" href="./certificate-mikhail.svg" target="_blank" rel="noreferrer">
+                  <span class="btn__icon" aria-hidden="true">⧉</span>
+                  <span class="btn__text">Открыть отдельно</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="passions" class="section" aria-label="Увлечения">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 class="section__title">Твоя скорость и стиль</h2>
+            <p class="section__subtitle">
+              Мотоциклы и машины — это не просто техника. Это характер.
+            </p>
+          </div>
+
+          <div class="split">
+            <div class="panel panel--moto">
+              <h3 class="panel__title">Мотоциклы</h3>
+              <p class="panel__text">
+                Свобода, дорога, концентрация. Ты умеешь держать баланс — и на поворотах, и в
+                жизни.
+              </p>
+              <ul class="list">
+                <li class="list__item">Уверенность и спокойствие на любом пути</li>
+                <li class="list__item">Смелость без бравады</li>
+                <li class="list__item">Честная любовь к дороге</li>
+              </ul>
+            </div>
+
+            <div class="panel panel--car">
+              <h3 class="panel__title">Машины</h3>
+              <p class="panel__text">
+                Точность, надёжность и внимание к деталям. Ты чувствуешь технику — и умеешь сделать
+                так, чтобы всё работало идеально.
+              </p>
+              <ul class="list">
+                <li class="list__item">Собранность и порядок</li>
+                <li class="list__item">Умение “дожимать” до результата</li>
+                <li class="list__item">Надёжность, на которую можно положиться</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hands" class="section" aria-label="Золотые руки">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 class="section__title">Золотые руки</h2>
+            <p class="section__subtitle">То, что ломается — рядом с тобой становится лучше, чем было.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="card card--soft">
+              <h3 class="card__title">Мастер, который не бросает</h3>
+              <p class="card__text">
+                Ты умеешь доводить до ума: спокойно, точно, с уважением к делу. И этому мы учимся у
+                тебя каждый день.
+              </p>
+              <div class="tags" aria-label="Теги">
+                <span class="tag">терпение</span>
+                <span class="tag">точность</span>
+                <span class="tag">надежность</span>
+              </div>
+            </div>
+
+            <div class="card card--soft">
+              <h3 class="card__title">Руки + голова + сердце</h3>
+              <p class="card__text">
+                Твоя сила — не только в умении чинить. Ты умеешь поддержать, объяснить, защитить и
+                сделать так, чтобы мы верили в себя.
+              </p>
+              <div class="tags" aria-label="Теги">
+                <span class="tag">поддержка</span>
+                <span class="tag">уважение</span>
+                <span class="tag">пример</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline" aria-label="Три штриха">
+            <div class="timeline__item">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__title">Ты учил делать правильно</div>
+                <div class="timeline__text">Не “как попало”, а так, чтобы не стыдно.</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__title">Ты учил держать слово</div>
+                <div class="timeline__text">Сказал — сделал. Это дорогого стоит.</div>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__title">Ты учил быть человеком</div>
+                <div class="timeline__text">Сильным, спокойным и добрым.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="thanks" class="section section--final" aria-label="Финальное поздравление">
+        <div class="wrap">
+          <div class="final card card--glass">
+            <h2 class="final__title">Папа, с Днём рождения!</h2>
+            <p class="final__text">
+              Дорогой папа!
+              <br /><br />
+              Поздравляем тебя с днём рождения!
+              <br /><br />
+              Желаем тебе крепкого здоровья, железных нервов, огромного счастья и чтобы мы вели себя
+              так хорошо, что тебе даже не пришлось бы нас воспитывать! Пусть работа не утомляет,
+              кошелёк не пустеет, настроение всегда будет отличным, а телевизор, диван и вкусный
+              ужин всегда ждут тебя в полной боевой готовности.
+              <br /><br />
+              Спасибо тебе за твою силу, заботу, чувство юмора, мудрость и за все твои фирменные
+              папины фразы, которые мы запомнили на всю жизнь. Ты у нас самый лучший: можешь всё
+              починить, всё объяснить, всех защитить и ещё пошутить так, что смеётся вся семья.
+              <br /><br />
+              Оставайся таким же крутым, весёлым, надёжным и самым любимым папой!
+              <br /><br />
+              Мы тебя очень любим и обещаем хотя бы сегодня не слишком сильно тебя удивлять!
+              <br /><br />
+              С днём рождения!
+              <br /><br />
+              Твои дети.
+            </p>
+            <div class="final__actions">
+              <button class="btn btn--primary" type="button" data-action="confetti">
+                <span class="btn__text">Сделать праздник</span>
+                <span class="btn__icon" aria-hidden="true">✦</span>
+              </button>
+              <button class="btn btn--soft" type="button" data-action="copy">
+                <span class="btn__icon" aria-hidden="true">⧉</span>
+                <span class="btn__text" data-copy-label>Скопировать текст</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="wrap footer__inner">
+        <div class="footer__left">
+          <span class="footer__dot" aria-hidden="true"></span>
+          <span class="footer__text">Сделано с любовью</span>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="#main">Наверх</a>
+        </div>
+      </div>
+    </footer>
+
+    <canvas class="confetti" aria-hidden="true"></canvas>
+
+    <div
+      class="video-overlay"
+      id="celebration-video"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Поздравительное видео"
+    >
+      <button type="button" class="video-overlay__backdrop" data-close-video tabindex="-1" aria-label="Закрыть"></button>
+      <div class="video-overlay__panel">
+        <button type="button" class="video-overlay__close" data-close-video aria-label="Закрыть видео">
+          ×
+        </button>
+        <video
+          class="video-overlay__player"
+          id="celebration-player"
+          controls
+          playsinline
+          preload="metadata"
+          src="./IMG_0283.mov"
+        >
+          Ваш браузер не воспроизводит это видео. Попробуйте открыть файл <code>IMG_0283.mov</code> отдельно.
+        </video>
+      </div>
+    </div>
+
+    <audio
+      id="engine"
+      preload="auto"
+      src="./69cd54eed45a2100017a35b9_result_1.mp3"
+      loop
+    ></audio>
+  </body>
+</html>
