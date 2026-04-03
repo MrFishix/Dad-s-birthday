@@ -271,9 +271,24 @@ function initConfetti() {
 
   const overlay = document.getElementById("celebration-video");
   const video = document.getElementById("celebration-player");
+  const videoErr = document.getElementById("celebration-video-err");
+
+  const hideVideoError = () => {
+    if (!videoErr) return;
+    videoErr.hidden = true;
+    videoErr.textContent = "";
+  };
+
+  const showVideoError = () => {
+    if (!videoErr) return;
+    videoErr.hidden = false;
+    videoErr.textContent =
+      "Видео не удалось открыть. Проверьте, что IMG_0283.mp4 лежит рядом с index.html, закоммичен и запушен на GitHub (лимит одного файла ~100 МБ). В Chrome нужен MP4 с кодеком H.264.";
+  };
 
   const closeVideo = () => {
     if (!overlay || !video) return;
+    hideVideoError();
     video.pause();
     try {
       video.currentTime = 0;
@@ -288,6 +303,7 @@ function initConfetti() {
 
   const openVideo = async () => {
     if (!overlay || !video) return;
+    hideVideoError();
     overlay.hidden = false;
     overlay.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -308,6 +324,9 @@ function initConfetti() {
   });
   video.addEventListener("ended", () => {
     unduckBackgroundMusic();
+  });
+  video.addEventListener("error", () => {
+    showVideoError();
   });
 
   document.querySelectorAll("[data-close-video]").forEach((el) => {
