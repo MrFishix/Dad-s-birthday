@@ -192,6 +192,44 @@ a{color:inherit}
   gap: 12px;
   flex-wrap:wrap;
   margin: 18px 0 16px;
+  align-items: flex-end;
+}
+
+.hero__atmo,
+.final__celebrate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.hero__atmo-hint{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  padding-bottom: 0;
+}
+.final__celebrate-hint{
+  max-width: min(340px, 100%);
+}
+.hero__atmo-hint-text{
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  transform: rotate(-2deg);
+  text-shadow: 0 0 22px color-mix(in oklab, var(--accent) 35%, transparent);
+  text-align: center;
+}
+.hero__atmo-arrow{
+  width: 56px;
+  height: auto;
+  color: var(--accent);
+  margin: 0;
+  overflow: visible;
+  display: block;
+  filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--accent) 20%, transparent));
 }
 
 .chips{
@@ -470,7 +508,12 @@ a{color:inherit}
 .final{padding: 22px}
 .final__title{margin:0 0 10px; font-size: clamp(24px, 2.8vw, 34px)}
 .final__text{margin:0 0 16px; color:var(--muted); line-height:1.8}
-.final__actions{display:flex; gap:12px; flex-wrap:wrap}
+.final__actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items: flex-end;
+}
 .final__small{margin: 14px 0 0; color: var(--faint); line-height:1.6; font-size: 12px}
 
 .btn{

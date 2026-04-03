@@ -76,10 +76,46 @@
                 <span class="btn__text">Открыть поздравление</span>
                 <span class="btn__icon" aria-hidden="true">→</span>
               </a>
-              <button class="btn btn--soft" type="button" data-action="play">
-                <span class="btn__icon" aria-hidden="true">▶</span>
-                <span class="btn__text" data-play-label>Включить атмосферу</span>
-              </button>
+              <div class="hero__atmo">
+                <div class="hero__atmo-hint" aria-hidden="true">
+                  <span class="hero__atmo-hint-text">Обязательно нажми</span>
+                  <svg
+                    class="hero__atmo-arrow"
+                    viewBox="0 0 56 68"
+                    xmlns="http://www.w3.org/2000/svg"
+                    focusable="false"
+                  >
+                    <defs>
+                      <marker
+                        id="atmo-hand-arrow"
+                        viewBox="0 0 10 10"
+                        refX="9"
+                        refY="5"
+                        markerWidth="8"
+                        markerHeight="8"
+                        orient="auto"
+                        markerUnits="userSpaceOnUse"
+                      >
+                        <path d="M0 0 L10 5 L0 10 Z" fill="currentColor" />
+                      </marker>
+                    </defs>
+                    <!-- Вниз к кнопке: P2 и P3 по одной вертикали — наконечник смотрит вниз -->
+                    <path
+                      d="M28 6 C24 22 28 40 28 58"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      marker-end="url(#atmo-hand-arrow)"
+                    />
+                  </svg>
+                </div>
+                <button class="btn btn--soft" type="button" data-action="play">
+                  <span class="btn__icon" aria-hidden="true">▶</span>
+                  <span class="btn__text" data-play-label>Включить атмосферу</span>
+                </button>
+              </div>
             </div>
 
             <ul class="chips" aria-label="Факты">
@@ -336,10 +372,45 @@
               Твои дети.
             </p>
             <div class="final__actions">
-              <button class="btn btn--primary" type="button" data-action="confetti">
-                <span class="btn__text">Сделать праздник</span>
-                <span class="btn__icon" aria-hidden="true">✦</span>
-              </button>
+              <div class="final__celebrate">
+                <div class="hero__atmo-hint final__celebrate-hint" aria-hidden="true">
+                  <span class="hero__atmo-hint-text">А теперь обязательно нажми сюда</span>
+                  <svg
+                    class="hero__atmo-arrow"
+                    viewBox="0 0 56 68"
+                    xmlns="http://www.w3.org/2000/svg"
+                    focusable="false"
+                  >
+                    <defs>
+                      <marker
+                        id="final-hand-arrow"
+                        viewBox="0 0 10 10"
+                        refX="9"
+                        refY="5"
+                        markerWidth="8"
+                        markerHeight="8"
+                        orient="auto"
+                        markerUnits="userSpaceOnUse"
+                      >
+                        <path d="M0 0 L10 5 L0 10 Z" fill="currentColor" />
+                      </marker>
+                    </defs>
+                    <path
+                      d="M28 6 C24 22 28 40 28 58"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      marker-end="url(#final-hand-arrow)"
+                    />
+                  </svg>
+                </div>
+                <button class="btn btn--primary" type="button" data-action="confetti">
+                  <span class="btn__text">Сделать праздник</span>
+                  <span class="btn__icon" aria-hidden="true">✦</span>
+                </button>
+              </div>
               <button class="btn btn--soft" type="button" data-action="copy">
                 <span class="btn__icon" aria-hidden="true">⧉</span>
                 <span class="btn__text" data-copy-label>Скопировать текст</span>
